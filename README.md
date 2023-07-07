@@ -3,7 +3,7 @@ This official repository contains the dataset, source code of paper 'Referring C
 In this paper, we consider the problem of referring camouflaged object detection (RefCOD), a new task that aims to segment specified
 camouflaged objects based on a small set of referring images with salient target objects. 
 
-## 1. Get Start
+## Get Start
 <p align="center">
     <img src="figs/r2cnet.png" width="950"/> <br />
 </p>
