@@ -15,6 +15,19 @@ encoder are employed to represent the given image. Then, these two kinds of feat
 RMG module to generate a mask prior, which is used to enrich the visual feature among different scales to highlight the camouflaged targets in our
 RFE module. Finally, the enriched features are fed into the decoder to generate the final segmentation map. DSF:Dual-source Information Fusion, MSF: Multi-scale Feature Fusion, TM: Target Matching.
 
+**0. Install**
+
+```
+conda create --name refcod python=3.8
+conda activate refcod
+pip install torchvision==0.13.1
+pip install opencv-python
+pip install opencv-contrib-python
+pip install scikit-learn
+pip install matplotlib
+pip install tqdm
+pip install tensorboard
+
 **1. Datasets.**
 
 - To reproduce our results, you should first download our ensembled [R2C7K](https://pan.baidu.com/s/1nAKETFmDiSm7dDLxlgH9tw) dataset with access code ```2023``` on Baidu Netdisk.
