@@ -21,7 +21,7 @@ RFE module. Finally, the enriched features are fed into the decoder to generate 
 - Update the 'data_root' param with your R2C7K location in train.py and test.py.
 
 **2. Test.**
-- Download our pre-trained [R2CNet]() checkpoints with access code 2023 on Baidu Netdisk.
+- Download our pre-trained [r2cnet.pth](https://pan.baidu.com/s/1VPr1YbuZthUWMRmcKxVhvA ) checkpoints with access code 2023 on Baidu Netdisk.
 - Put the checkpoint file on './snapshot/saved_models/'.
 - Run ```python test.py``` to evaluate the performance of R2CNet.
 
