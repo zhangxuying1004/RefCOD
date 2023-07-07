@@ -20,7 +20,7 @@ RFE module. Finally, the enriched features are fed into the decoder to generate 
 ```
 conda create --name refcod python=3.8
 conda activate refcod
-pip install torchvision==0.13.1
+pip install torchvision==0.8.2 torch==1.7.1
 pip install opencv-python
 pip install opencv-contrib-python
 pip install scikit-learn
