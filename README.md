@@ -1,5 +1,5 @@
 # <p align=center>`Referring Camouflaged Object Detection (RefCOD) `</p>
-This official repository contains the dataset, source code, and evaluation toolbox of paper 'Referring Camouflaged Object Detection'.
+This official repository contains the dataset, source code of paper 'Referring Camouflaged Object Detection'.
   
 **1. Method.**
 <p align="center">
@@ -15,10 +15,10 @@ RFE module. Finally, the enriched features are fed into the decoder to generate 
 
 **2. Datasets.**
 
-- To reproduce our results, you should first download our ensembled [R2C7K]([https://pan.baidu.com/s/1Tcvt0IJYdKSYAb_BD5QrTg?pwd=2gf4](https://pan.baidu.com/s/1nAKETFmDiSm7dDLxlgH9tw)) dataset with access code ```2023``` on Baidu Netdisk.
+- To reproduce our results, you should first download our ensembled [R2C7K](https://pan.baidu.com/s/1Tcvt0IJYdKSYAb_BD5QrTg?pwd=2gf4) dataset with access code ```2023``` on Baidu Netdisk.
 - Update the 'data_root' param with your R2C7K location in train.py and test.py.
 
 **3. Test.**
-- Download our pre-trained [R2CNet]([https://pan.baidu.com/s/1Tcvt0IJYdKSYAb_BD5QrTg?pwd=2gf4](https://pan.baidu.com/s/1nAKETFmDiSm7dDLxlgH9tw)) checkpoints with access code 2023 on Baidu Netdisk.
+- Download our pre-trained [R2CNet]() checkpoints with access code 2023 on Baidu Netdisk.
 - Put the checkpoint file on './snapshot/saved_models/'.
 - Run ```python test.py``` to evaluate the performance of R2CNet.
