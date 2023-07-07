@@ -17,7 +17,7 @@ RFE module. Finally, the enriched features are fed into the decoder to generate 
 
 **2. Datasets.**
 
-- To reproduce our results, you should first download our ensembled [R2C7K](https://pan.baidu.com/s/1Tcvt0IJYdKSYAb_BD5QrTg?pwd=2gf4) dataset with access code ```2023``` on Baidu Netdisk.
+- To reproduce our results, you should first download our ensembled [R2C7K](https://pan.baidu.com/s/1nAKETFmDiSm7dDLxlgH9tw) dataset with access code ```2023``` on Baidu Netdisk.
 - Update the 'data_root' param with your R2C7K location in train.py and test.py.
 
 **3. Test.**
