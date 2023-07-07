@@ -1,5 +1,7 @@
 # <p align=center>`Referring Camouflaged Object Detection (RefCOD) `</p>
-This official repository contains the dataset, source code of paper 'Referring Camouflaged Object Detection'.
+This official repository contains the dataset, source code of paper 'Referring Camouflaged Object Detection'.   
+In this paper, we consider the problem of referring camouflaged object detection (RefCOD), a new task that aims to segment specified
+camouflaged objects based on a small set of referring images with salient target objects. 
   
 **1. Method.**
 <p align="center">
