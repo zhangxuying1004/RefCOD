@@ -4,8 +4,7 @@ import torch.nn.functional as F
 import torchvision
 
 from models.utils import BasicConv2d
-from models.featfusion import FeatFusion
-from models.featenrich import RFE
+from models.modules import FeatFusion, RFE
 
 
 class Network(nn.Module):
