@@ -1,11 +1,12 @@
-import torch
-import torch.nn.functional as F
+import argparse
 from tqdm import tqdm
 import numpy as np
 import os
 
-from models.r2cnet import Network
+import torch
+import torch.nn.functional as F
 
+from models.r2cnet import Network
 from data import get_dataloader
 import metrics as Measure
 
@@ -57,7 +58,6 @@ def load_model_params(model, params_path):
 
 
 if __name__ == '__main__':
-    import argparse
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_name', type=str, default='r2cnet')
@@ -69,13 +69,13 @@ if __name__ == '__main__':
     parser.add_argument('--gpu_id', type=str, default='1', help='train use gpu')
 
     parser.add_argument('--data_root', type=str, default='/home/zhangxuying/Datasets/R2C7K/', help='the path to put dataset')  
-    parser.add_argument('--save_root', type=str, default='/home/zhangxuying/MyProject/SOD2COD-ICCV/snapshot_params/', help='the path to save model params and log')
+    parser.add_argument('--save_root', type=str, default='./snapshot/', help='the path to save model params and log')
 
     opt = parser.parse_args()
     print(opt)
 
     ref_model = Network(channel=opt.dim, imagenet_pretrained=False).cuda()
-    params_path = os.path.join(opt.save_root, 'saved_models', 'r2cnet.pth')  # './snapshot/saved_models/r2cnet.pth'
+    params_path = os.path.join(opt.save_root, 'saved_models', '{}.pth'.format(opt.model_name)  # './snapshot/saved_models/r2cnet.pth'
     ref_model = load_model_params(ref_model, params_path)
 
     test_loader = get_dataloader(opt.data_root, opt.shot, opt.trainsize, opt.num_workers, mode='test')
