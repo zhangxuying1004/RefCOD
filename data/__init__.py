@@ -21,11 +21,11 @@ def get_dataloader(data_root, shot, trainsize, batchsize=32, num_workers=8, mode
         train_loader = data.DataLoader(train_data, batch_size=batchsize, shuffle=True, num_workers=num_workers, pin_memory=True, sampler=None, drop_last=True)
         return train_loader
 
-    elif mode == 'val':
+    elif mode == 'val' or mode == 'test':
         print('laod val data...')
         val_data = Dataset(
             data_root=data_root, 
-            mode='val',
+            mode=mode,
             shot=shot,
             image_size=trainsize
         )
