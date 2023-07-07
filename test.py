@@ -50,7 +50,7 @@ def test_model(test_loader, model):
         wfm = WFM.get_results()['wfm'].round(3)
         mae = MAE.get_results()['mae'].round(3)
 
-        return {'Sm':sm, 'adpE':adpem1, 'wF':wfm1, 'M':mae}
+        return {'Sm':sm, 'adpE':adpem, 'wF':wfm, 'M':mae}
 
 
 def load_model_params(model, params_path):
@@ -80,7 +80,7 @@ if __name__ == '__main__':
     print(opt)
 
     ref_model = Network(channel=opt.dim, imagenet_pretrained=False).cuda()
-    params_path = os.path.join(opt.save_root, 'saved_models', '{}.pth'.format(opt.model_name)  # './snapshot/saved_models/r2cnet.pth'
+    params_path = os.path.join(opt.save_root, 'saved_models', '{}.pth'.format(opt.model_name))  # './snapshot/saved_models/r2cnet.pth'
     ref_model = load_model_params(ref_model, params_path)
 
     test_loader = get_dataloader(opt.data_root, opt.shot, opt.trainsize, opt.num_workers, mode='test')
