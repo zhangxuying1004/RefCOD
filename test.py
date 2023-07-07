@@ -1,7 +1,12 @@
+'''
+the codes for evaluating model.
+create by Xuying Zhang
+'''
+
 import argparse
-from tqdm import tqdm
-import numpy as np
 import os
+import numpy as np
+from tqdm import tqdm
 
 import torch
 import torch.nn.functional as F
