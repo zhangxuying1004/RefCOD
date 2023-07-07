@@ -4,7 +4,7 @@ from tqdm import tqdm
 import numpy as np
 import os
 
-from adjust.r2cnet import Network
+from models.r2cnet import Network
 
 from data import get_dataloader
 import metrics as Measure
