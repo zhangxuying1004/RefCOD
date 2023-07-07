@@ -2,8 +2,8 @@
 This official repository contains the dataset, source code of paper 'Referring Camouflaged Object Detection'.   
 In this paper, we consider the problem of referring camouflaged object detection (RefCOD), a new task that aims to segment specified
 camouflaged objects based on a small set of referring images with salient target objects. 
-  
-**1. Method.**
+
+## 1. Get Start
 <p align="center">
     <img src="figs/r2cnet.png" width="950"/> <br />
 </p>
@@ -15,12 +15,22 @@ encoder are employed to represent the given image. Then, these two kinds of feat
 RMG module to generate a mask prior, which is used to enrich the visual feature among different scales to highlight the camouflaged targets in our
 RFE module. Finally, the enriched features are fed into the decoder to generate the final segmentation map. DSF:Dual-source Information Fusion, MSF: Multi-scale Feature Fusion, TM: Target Matching.
 
-**2. Datasets.**
+**1. Datasets.**
 
 - To reproduce our results, you should first download our ensembled [R2C7K](https://pan.baidu.com/s/1nAKETFmDiSm7dDLxlgH9tw) dataset with access code ```2023``` on Baidu Netdisk.
 - Update the 'data_root' param with your R2C7K location in train.py and test.py.
 
-**3. Test.**
+**2. Test.**
 - Download our pre-trained [R2CNet]() checkpoints with access code 2023 on Baidu Netdisk.
 - Put the checkpoint file on './snapshot/saved_models/'.
 - Run ```python test.py``` to evaluate the performance of R2CNet.
+
+## Reference
+If our work is helpful to you or gives some inspiration to you, please star this project and cite our paper. Thank you!  
+```
+@article{zhang2023referring,
+  title={Referring Camouflaged Object Detection},
+  author={Zhang, Xuying and Yin, Bowen and Lin, Zheng and Hou, Qibin and Fan, Deng-Ping and Cheng, Ming-Ming},
+  journal={arXiv preprint arXiv:2306.07532},
+  year={2023}
+}
