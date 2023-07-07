@@ -1,5 +1,9 @@
+import os
 import numpy as np
 import random
+from tqdm import tqdm
+import json
+
 from PIL import Image, ImageEnhance
 import cv2
 import torch
@@ -124,3 +128,81 @@ class ToTensor(object):
             return image
         mask  = torch.from_numpy(mask)
         return image, mask 
+    
+
+# -----------------------------------
+
+def split_ref_data(data_root, record_file='./data/refsplits.json'):
+    '''
+    给定收集好的Ref图片，
+    划分训练和测试集，记录划分情况
+    '''
+    assert os.path.exists(data_root)
+    os.makedirs('/'.join(record_file.split('/')[:-1]), exist_ok=True)
+
+    refsplits = {
+        'train': {},
+        "test": {}
+    }
+
+    ref_image_root = os.path.join(data_root, 'Ref', 'Images')
+    assert os.path.exists(ref_image_root)
+    cates = os.listdir(ref_image_root)
+
+    for cate in cates:
+        ref_cate_image_dir = os.path.join(ref_image_root, cate)
+        ref_cate_image_names = os.listdir(ref_cate_image_dir)
+        assert len(ref_cate_image_names) == 25
+        random.shuffle(ref_cate_image_names)
+        ref_cate_train_samples = [name[:-4] for name in ref_cate_image_names[:20]]
+        ref_cate_test_samples = [name[:-4] for name in ref_cate_image_names[20:]]
+
+        refsplits['train'][cate] = ref_cate_train_samples
+        refsplits['test'][cate] = ref_cate_test_samples
+
+    with open(record_file, 'w') as f:
+        json.dump(refsplits, f, indent=4)
+
+
+def collect_r2c_data(data_root, mode='train', record_file='./data/refsplits.json'):
+
+    if not os.path.exists(record_file):
+        split_ref_data(data_root, record_file) 
+
+    assert os.path.exists(data_root)
+    camo_Imgs_dir = os.path.join(data_root, 'Camo', mode if mode != 'val' else 'test', 'Imgs')
+    camo_gts_dir = os.path.join(data_root, 'Camo', mode if mode != 'val' else 'test', 'GT')
+    assert os.path.exists(camo_Imgs_dir) and os.path.exists(camo_gts_dir)
+
+    ref_feats_dir = os.path.join(data_root, 'Ref', 'RefFeat_ICON-R')
+    assert os.path.exists(ref_feats_dir)
+    
+    camo_classes = os.listdir(camo_Imgs_dir)
+    ref_classes = os.listdir(ref_feats_dir)
+
+    assert len(camo_classes) == len(ref_classes) == 64
+
+    with open(record_file, 'r') as f:
+        splits = json.load(f)
+
+    image_label_list = []
+    class_file_list = {}
+    for c_idx in tqdm(range(len(camo_classes))):
+        cate = camo_classes[c_idx]
+
+        camo_cate_Imgs_dir = os.path.join(camo_Imgs_dir, cate)
+        camo_cate_gts_dir = os.path.join(camo_gts_dir, cate)
+        camo_img_names = sorted(os.listdir(camo_cate_Imgs_dir))
+        camo_gt_names = sorted(os.listdir(camo_cate_gts_dir))
+        assert len(camo_img_names) == len(camo_gt_names)
+
+        image_label_list += [(os.path.join(camo_cate_Imgs_dir, camo_img_names[f_idx]), os.path.join(camo_cate_gts_dir, camo_gt_names[f_idx])) for f_idx in range(len(camo_img_names))]
+
+        ref_cate_feats_dir = os.path.join(ref_feats_dir, cate)
+
+        ref_cate_split_names = splits[mode if mode != 'val' else 'test'][cate]
+        class_file_list[cate] = [os.path.join(ref_cate_feats_dir, ref_cate_split_names[f_idx]+'.npy') for f_idx in range(len(ref_cate_split_names))]
+
+    print('>>> {}ing with {} r2c samples'.format(mode, len(image_label_list)))
+    
+    return image_label_list, class_file_list
