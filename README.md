@@ -67,7 +67,7 @@ RFE module. Finally, the enriched features are fed into the decoder to generate 
 ## Acknowlegement
 This repo is mainly built based on [SINet-V2](https://github.com/GewelsJI/SINet-V2) and [PFENet](https://github.com/dvlab-research/PFENet). Thanks for their great work and friendly codebases!
 
-## Reference
+## Citation
 If our work is helpful to you or gives some inspiration to you, please star this project and cite our paper. Thank you!  
 ```
 @article{zhang2023referring,
