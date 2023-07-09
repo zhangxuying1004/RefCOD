@@ -42,11 +42,12 @@ conda activate refcod
 ```   
 ├── R2C7K  
     ├── Camo  
-        ├── train       # training set of camo-subset with 64 categories.  
-        └── test        # tesing set of camo-subset with 64 categories.  
+        ├── train                # training set of camo-subset with 64 categories.  
+        └── test                 # tesing set of camo-subset with 64 categories.  
     ├── Ref          
-        ├── train       # training set of ref-subset with 64 categories.  
-        └── test        # tesing set of ref-subset with 64 categories.  
+        ├── Images               # all images of ref-subset with 64 categories.
+        ├── RefFeat_ICON-R       # all object representations of ref-subset with 64 categories.  
+        └── Saliency_ICON-R      # all foreground maps of ref-subset with 64 categories.  
 ```
 - Update the 'data_root' param with your R2C7K location in ```train.py```, ```infer.py``` and ```test.py```.
 
