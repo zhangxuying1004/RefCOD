@@ -4,6 +4,21 @@ import torch
 import torch.nn.functional as F
 
 
+def set_gpu(gpu_id='0'):
+    if gpu_id == '0':
+        os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+        print('USE GPU 0')
+    elif gpu_id == '1':
+        os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+        print('USE GPU 1')
+    elif gpu_id == '2':
+        os.environ["CUDA_VISIBLE_DEVICES"] = "2"
+        print('USE GPU 2')
+    elif gpu_id == '3':
+        os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+        print('USE GPU 3')
+
+
 def structure_loss(pred, mask):
     """
     loss function (ref: F3Net-AAAI-2020)
