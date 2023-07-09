@@ -2,10 +2,10 @@
 > **Authors:**
 > [Xuying Zhang](https://zhangxuying1004.github.io/),
 > [Bowen Yin](http://yinbowen-chn.github.io/),
-> [Zheng Lin](),
-> [Qibin Hou](),
-> [Deng-Ping Fan](), 
-> [Mingming Cheng]().
+> [Zheng Lin](https://www.lin-zheng.com/),
+> [Qibin Hou](https://houqb.github.io/),
+> [Deng-Ping Fan](https://dengpingfan.github.io/), 
+> [Ming-Ming Cheng](https://mmcheng.net/).
 
 This official repository contains the dataset and source code of 'Referring Camouflaged Object Detection'.   
 In this paper, we consider the problem of referring camouflaged object detection (Ref-COD), a new task that aims to segment specified
