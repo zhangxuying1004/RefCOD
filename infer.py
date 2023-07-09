@@ -1,6 +1,6 @@
 '''
-the codes for evaluating model.
-create by Xuying Zhang
+the codes for evaluating the model.
+created by Xuying Zhang (zhangxuying1004@gmail.com) on 2021-06-23
 '''
 
 import argparse
@@ -77,4 +77,5 @@ if __name__ == '__main__':
     # where to save maps
     target_dir = os.path.join(opt.save_root, 'preds', opt.model_name)
 
+    # processing
     gen_maps(ref_model, test_loader, target_dir)
