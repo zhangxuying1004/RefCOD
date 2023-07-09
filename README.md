@@ -43,9 +43,12 @@ pip install tensorboard
 - Update the 'data_root' param with your R2C7K location in train.py and test.py.
 
 **2. Test.**
-- Download our pre-trained [r2cnet.pth](https://pan.baidu.com/s/1VPr1YbuZthUWMRmcKxVhvA ) checkpoints with access code 2023 on Baidu Netdisk.
+- Download our pre-trained [r2cnet.pth](https://pan.baidu.com/s/1VPr1YbuZthUWMRmcKxVhvA) checkpoints with access code ```2023``` on Baidu Netdisk.
 - Put the checkpoint file on './snapshot/saved_models/'.
 - Run ```python test.py``` to evaluate the performance of R2CNet.
+
+## Acknowlegement
+This repo is mainly built based on [SINet-V2](https://github.com/GewelsJI/SINet-V2) and [PFENet](https://github.com/dvlab-research/PFENet). Thanks for their great work and friendly codebases!
 
 ## Reference
 If our work is helpful to you or gives some inspiration to you, please star this project and cite our paper. Thank you!  
