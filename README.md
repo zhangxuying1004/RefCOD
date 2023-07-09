@@ -48,7 +48,7 @@ conda activate refcod
         ├── train       # training set of ref-subset with 64 categories.  
         └── test        # tesing set of ref-subset with 64 categories.  
 ```
-- Update the 'data_root' param with your R2C7K location in ```train.py``` and ```test.py```.
+- Update the 'data_root' param with your R2C7K location in ```train.py```, ```infer.py``` and ```test.py```.
 
 **2. Framework**
 <p align="center">
