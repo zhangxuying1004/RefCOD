@@ -1,4 +1,12 @@
 # <p align=center>`Referring Camouflaged Object Detection `</p>
+> **Authors:**
+> [Xuying Zhang](https://zhangxuying1004.github.io/),
+> [Bowen Yin](http://yinbowen-chn.github.io/),
+> [Zheng Lin](),
+> [Qibin Hou](),
+> [Deng-Ping Fan](), 
+> [Mingming Cheng]().
+
 This official repository contains the dataset, source code of paper 'Referring Camouflaged Object Detection'.   
 In this paper, we consider the problem of referring camouflaged object detection (RefCOD), a new task that aims to segment specified
 camouflaged objects based on a small set of referring images with salient target objects. 
