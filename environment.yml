@@ -1,4 +1,4 @@
-name: m2release
+name: refcod
 channels:
   - anaconda
   - defaults
