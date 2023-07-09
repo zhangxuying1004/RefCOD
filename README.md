@@ -14,7 +14,7 @@ camouflaged objects based on a small set of referring images with salient target
 <p align="center">
     <img src="figs/refcod.png" width="450"/> <br />
     <em> 
-    Visual comparison between the standard COD and our Ref-COD.
+    Figure: Visual comparison between the standard COD and our Ref-COD.
     Given an image containing multiple camouflaged objects, the COD
     model tends to find all possible camouflaged objects that are blended
     into the background without discrimination, while the Ref-COD model
@@ -43,7 +43,7 @@ RMG module to generate a mask prior, which is used to enrich the visual feature 
 RFE module. Finally, the enriched features are fed into the decoder to generate the final segmentation map. DSF:Dual-source Information Fusion, MSF: Multi-scale Feature Fusion, TM: Target Matching.
 
 **2. Datasets.**
-- To reproduce our results, you should first download our ensembled [R2C7K](https://pan.baidu.com/s/1nAKETFmDiSm7dDLxlgH9tw) dataset with access code ```2023``` on Baidu Netdisk.
+- Download our ensembled [R2C7K](https://pan.baidu.com/s/1nAKETFmDiSm7dDLxlgH9tw) dataset with access code ```2023``` on Baidu Netdisk.
 - Update the 'data_root' param with your R2C7K location in train.py and test.py.
 
 **3. Infer.**
