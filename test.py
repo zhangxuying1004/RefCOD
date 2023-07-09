@@ -1,6 +1,6 @@
 '''
-the codes for evaluating model.
-create by Xuying Zhang
+the codes for evaluating the model.
+created by Xuying Zhang (zhangxuying1004@gmail.com) on 2023-06-23
 '''
 
 import argparse
@@ -13,7 +13,8 @@ import torch.nn.functional as F
 
 from models.r2cnet import Network
 from data import get_dataloader
-import metrics as Measure
+import utils.metrics as Measure
+from utils.utils import load_model_params
 
 
 def test_model(test_loader, model):
@@ -53,15 +54,6 @@ def test_model(test_loader, model):
         return {'Sm':sm, 'adpE':adpem, 'wF':wfm, 'M':mae}
 
 
-def load_model_params(model, params_path):
-    assert os.path.exists(params_path)
-    checkpoints = torch.load(params_path)
-    # print(checkpoints['epoch'])
-
-    model.load_state_dict(checkpoints['state_dict'])
-    return model
-
-
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
@@ -79,11 +71,15 @@ if __name__ == '__main__':
     opt = parser.parse_args()
     print(opt)
 
+    # load model 
     ref_model = Network(channel=opt.dim, imagenet_pretrained=False).cuda()
     params_path = os.path.join(opt.save_root, 'saved_models', '{}.pth'.format(opt.model_name))  # './snapshot/saved_models/r2cnet.pth'
     ref_model = load_model_params(ref_model, params_path)
 
+    # load data
     test_loader = get_dataloader(opt.data_root, opt.shot, opt.trainsize, opt.num_workers, mode='test')
+
+    # processing
     scores = test_model(test_loader, ref_model)
 
     print(scores)
