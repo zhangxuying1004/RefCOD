@@ -38,7 +38,16 @@ conda activate refcod
     </em>
 </p>
 
-- Download our ensembled [R2C7K](https://pan.baidu.com/s/1nAKETFmDiSm7dDLxlgH9tw) dataset with access code ```2023``` on Baidu Netdisk.
+- Download our ensembled [R2C7K](https://pan.baidu.com/s/1nAKETFmDiSm7dDLxlgH9tw) dataset with access code ```2023``` on Baidu Netdisk. The folders are arranged as follows:
+```   
+├── R2C7K  
+    ├── Camo  
+        ├── train       # training set of camo-subset with 64 categories.  
+        └── test        # tesing set of camo-subset with 64 categories.  
+    ├── Ref          
+        ├── train       # training set of ref-subset with 64 categories.  
+        └── test        # tesing set of ref-subset with 64 categories.  
+```
 - Update the 'data_root' param with your R2C7K location in train.py and test.py.
 
 **2. Framework**
