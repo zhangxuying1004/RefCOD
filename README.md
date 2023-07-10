@@ -68,7 +68,7 @@ RFE module. Finally, the enriched features are fed into the decoder to generate 
 - Download our pre-trained [r2cnet.pth](https://pan.baidu.com/s/1daqxGTy120JondOIvCAEOw) checkpoints with access code ```2023``` on Baidu Netdisk.
 - Put the checkpoint file on './snapshot/saved_models/'.
 - Run ```python infer.py``` to generate the foreground maps of R2CNet.
-- You can also directly refer to the predictions in [R2CNet-Maps]().
+- You can also directly refer to the predictions [R2CNet-Maps](https://pan.baidu.com/s/1unQQOn9w3rW9aWdnYf_zrA) with access code ```2023``` on Baidu Netdisk.
 
 **4. Test.**
 - Assert that the pre-trained [r2cnet.pth](https://pan.baidu.com/s/1daqxGTy120JondOIvCAEOw) checkpoint file has been placed in './snapshot/saved_models/'.
