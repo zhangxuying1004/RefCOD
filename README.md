@@ -38,7 +38,7 @@ conda activate refcod
     </em>
 </p>
 
-- Download our ensembled [R2C7K](https://pan.baidu.com/s/1nAKETFmDiSm7dDLxlgH9tw) dataset with access code ```2023``` on Baidu Netdisk.  
+- Download our ensembled [R2C7K](https://pan.baidu.com/s/13wRyW81TIPjVCj9GP7o4BQ) dataset with access code ```2023``` on Baidu Netdisk.  
 ```   
 ├── R2C7K  
     ├── Camo  
