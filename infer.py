@@ -14,6 +14,8 @@ import torch.nn.functional as F
 from models.r2cnet import Network
 from data import get_dataloader
 
+from utils.utils import load_model_params, set_gpu
+
 
 def gen_maps(model, test_loader, target_dir):
     os.makedirs(target_dir, exist_ok=True)
@@ -40,21 +42,13 @@ def gen_maps(model, test_loader, target_dir):
               
                 pbar.update()
 
-def load_model_params(model, params_path):
-    assert os.path.exists(params_path)
-    checkpoints = torch.load(params_path)
-    # print(checkpoints['epoch'])
-
-    model.load_state_dict(checkpoints['state_dict'])
-    return model
-
 
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_name', type=str, default='r2cnet')
     parser.add_argument('--dim', type=int, default=64, help='training batch size')
-    parser.add_argument('--trainsize', type=int, default=352, help='training dataset size')
+    parser.add_argument('--testsize', type=int, default=352, help='training dataset size')
     parser.add_argument('--shot', type=int, default=5)
   
     parser.add_argument('--num_workers', type=int, default=8, help='the number of workers in dataloader')
@@ -66,13 +60,15 @@ if __name__ == '__main__':
     opt = parser.parse_args()
     print(opt)
 
+    set_gpu(opt.gpu_id)
+
     # load model
     ref_model = Network(channel=opt.dim, imagenet_pretrained=False).cuda()
-    params_path = os.path.join(opt.save_root, 'saved_models', '{}.pth'.format(opt.model_name))  # './snapshot/saved_models/r2cnet.pth'
+    params_path = os.path.join(opt.save_root, 'saved_models', '{}.pth'.format(opt.model_name))  # './snapshot/saved_models/r2cnet.pth')
     ref_model = load_model_params(ref_model, params_path)
 
     # load data
-    test_loader = get_dataloader(opt.data_root, opt.shot, opt.trainsize, opt.num_workers, mode='test')
+    test_loader = get_dataloader(opt.data_root, opt.shot, opt.testsize, opt.num_workers, mode='test')
 
     # where to save maps
     target_dir = os.path.join(opt.save_root, 'preds', opt.model_name)
