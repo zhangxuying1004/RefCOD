@@ -64,18 +64,33 @@ RFE module. Finally, the enriched features are fed into the decoder to generate 
     </em>
 </p>
 
-**3. Infer.**
-- Download our pre-trained [r2cnet.pth](https://pan.baidu.com/s/1daqxGTy120JondOIvCAEOw) checkpoints with access code ```2023``` on Baidu Netdisk.
+**3. Train.**
+```
+python train.py --model_name r2cnet --gpu_id 0
+```
+
+**4. Infer.**
+- Download the pre-trained [r2cnet.pth](https://pan.baidu.com/s/1daqxGTy120JondOIvCAEOw) checkpoints with access code ```2023``` on Baidu Netdisk.
 - Put the checkpoint file on './snapshot/saved_models/'.
 - Run ```python infer.py``` to generate the foreground maps of R2CNet.
 - You can also directly refer to the predictions [R2CNet-Maps](https://pan.baidu.com/s/1unQQOn9w3rW9aWdnYf_zrA) with access code ```2023``` on Baidu Netdisk.
 
-**4. Test.**
+**5. Test.**
 - Assert that the pre-trained [r2cnet.pth](https://pan.baidu.com/s/1daqxGTy120JondOIvCAEOw) checkpoint file has been placed in './snapshot/saved_models/'.
 - Run ```python test.py``` to evaluate the performance of R2CNet.
 
-## Acknowlegement
-This repo is mainly built based on [SINet-V2](https://github.com/GewelsJI/SINet-V2), [PFENet](https://github.com/dvlab-research/PFENet) and [MethodsCmp](https://github.com/lartpang/MethodsCmp). Thanks for their great work!
+**6. Ref-COD Benchmark Results.**
+<p align="center">
+    <em>
+      Tab. 1. Comparison of the COD models with their Ref-COD counterparts. All models are evaluated on a NVIDIA RTX 3090 GPU. ‘R-50’: ResNet-50 [82],
+      ‘E-B4’: EfficientNet-B4 [86], ‘R2-50’: Res2Net-50 [87], ‘R3
+      -50’: Triple ResNet-50 [2]. ‘-Ref’: the model with image references composed of salient
+      objects. ‘Attribute’: the attribute of each network, ‘Single-obj’: the scene of a single camouflaged object, ‘Multi-obj’: the scene of multiple
+      camouflaged objects, ‘Overall’: all scenes containing camouflaged objects.
+    </em>
+    <img src="figs/benchmarks.png" width="1000"/> <br />
+</p>
+
 
 ## Citation
 If our work is helpful to you or gives some inspiration to you, please star this project and cite our paper. Thank you!  
@@ -86,3 +101,8 @@ If our work is helpful to you or gives some inspiration to you, please star this
   journal={arXiv preprint arXiv:2306.07532},
   year={2023}
 }
+```
+
+## Acknowlegement
+This repo is mainly built based on [SINet-V2](https://github.com/GewelsJI/SINet-V2), [PFENet](https://github.com/dvlab-research/PFENet) and [MethodsCmp](https://github.com/lartpang/MethodsCmp). Thanks for their great work!
+
