@@ -60,7 +60,7 @@ def train(train_loader, model, optimizer, epoch, save_path, writer):
 
         loss_all /= epoch_step
         writer.add_scalar('Loss-epoch', loss_all, global_step=epoch)
-        if epoch % 50 == 0:
+        if epoch % 10 == 0:
             torch.save({
                 'state_dict': model.state_dict(),
                 'epoch': epoch
