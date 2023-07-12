@@ -7,7 +7,7 @@
 > [Deng-Ping Fan](https://dengpingfan.github.io/), 
 > [Ming-Ming Cheng](https://mmcheng.net/).
 
-This official repository contains the dataset and source code of 'Referring Camouflaged Object Detection'.   
+This repo contains the official dataset and source code of the paper [_Referring Camouflaged Object Detection_](https://arxiv.org/pdf/2306.07532.pdf).   
 In this paper, we consider the problem of referring camouflaged object detection (Ref-COD), a new task that aims to segment specified
 camouflaged objects based on a small set of referring images with salient target objects. 
   
