@@ -27,7 +27,7 @@ def test_model(test_loader, model):
     model.eval()
     with torch.no_grad():
         with tqdm(total=len(test_loader)) as pbar:
-            for (image, gt, sal_f) in test_loader:
+            for (image, gt, sal_f, _) in test_loader:
                 image = image.cuda()
                 gt = gt.numpy().astype(np.float32).squeeze()
                 gt /= (gt.max() + 1e-8)                     # 标准化处理,把数值范围控制到(0,1)
