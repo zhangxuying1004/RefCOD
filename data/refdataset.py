@@ -42,6 +42,8 @@ class R2CObjData(Dataset):
     def __getitem__(self, index):
         image_path, label_path = self.data_list[index]
 
+        name = image_path.split('/')[-1][:-4]
+
         # read query imgs/gts
         image = rgb_loader(image_path)          # PIL格式
         label = binary_loader(label_path)
@@ -85,7 +87,7 @@ class R2CObjData(Dataset):
             sal_f = -1                                                                                         
 
 
-        return image, label, sal_f
+        return image, label, sal_f, name
         
     
     def record_class_files(self):
