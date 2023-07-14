@@ -23,6 +23,9 @@ camouflaged objects based on a small set of referring images with salient target
     </em>
 </p>
 
+**Note**: I will upload the codes including the embedding process of the common representations of target objects, the attribution evaluation of different COD / Ref-COD methods, etc, within several weeks.
+And you can first use my processed representations at the below dataset link if you are interested in our Ref-COD topic.
+
 ## Environment setup
 ``` 
 conda env create -f environment.yml
