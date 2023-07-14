@@ -91,6 +91,8 @@ python train.py --model_name r2cnet --gpu_id 0
     <img src="figs/benchmarks.png" width="1000"/> <br />
 </p>
 
+## Contact
+For technical questions, feel free to contact `zhangxuying1004@gmail.com` and `bowenyin@mail.nankai.edu.cn`.
 
 ## Citation
 If our work is helpful to you or gives some inspiration to you, please star this project and cite our paper. Thank you!  
