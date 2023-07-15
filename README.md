@@ -23,6 +23,8 @@ camouflaged objects based on a small set of referring images with salient target
     </em>
 </p>
 
+> For technical questions, feel free to contact [zhangxuying1004@gmail.com]() and [bowenyin@mail.nankai.edu.cn](). If our work is helpful to you or gives some inspiration to you, please star this project and cite our paper ([BibTeX](https://github.com/zhangxuying1004/zhangxuying1004.github.io/blob/main/bibs/refcod.html)). Thank you!
+
 **Note**: I will upload the codes including the embedding process of the common representations of target objects, the attribution evaluation of different COD / Ref-COD methods, etc, within several weeks.
 And you can first use my processed representations at the below dataset link if you are interested in our Ref-COD topic.
 
@@ -93,20 +95,6 @@ python train.py --model_name r2cnet --gpu_id 0
     </em>
     <img src="figs/benchmarks.png" width="1000"/> <br />
 </p>
-
-## Contact
-For technical questions, feel free to contact [zhangxuying1004@gmail.com]() and [bowenyin@mail.nankai.edu.cn]().
-
-## Citation
-If our work is helpful to you or gives some inspiration to you, please star this project and cite our paper. Thank you!  
-```
-@article{zhang2023referring,
-  title={Referring Camouflaged Object Detection},
-  author={Zhang, Xuying and Yin, Bowen and Lin, Zheng and Hou, Qibin and Fan, Deng-Ping and Cheng, Ming-Ming},
-  journal={arXiv preprint arXiv:2306.07532},
-  year={2023}
-}
-```
 
 ## Acknowlegement
 This repo is mainly built based on [SINet-V2](https://github.com/GewelsJI/SINet-V2), [PFENet](https://github.com/dvlab-research/PFENet) and [MethodsCmp](https://github.com/lartpang/MethodsCmp). Thanks for their great work!
