@@ -26,7 +26,12 @@ camouflaged objects based on a small set of referring images with salient target
 
 > For technical questions, feel free to contact [zhangxuying1004@gmail.com]() and [bowenyin@mail.nankai.edu.cn](). If our work gives some inspiration to you, please cite it ([BibTeX](https://scholar.google.com.hk/scholar?hl=zh-CN&as_sdt=0%2C5&q=Referring+Camouflaged+Object+Detection+Xuying+&btnG=)) and star this project. Thank you!
 
-**Note**: I will upload the codes including the embedding process of the common representations of target objects, the attribution evaluation of different COD / Ref-COD methods, etc, within several weeks.
+**Todo List**
+I will upload the codes later, including:
+- [ ] the embedding process of the common representations of target objects; 
+- [ ] the attribution evaluation of different COD / Ref-COD methods;
+- [ ] others.
+
 And you can first use my processed representations at the below dataset link if you are interested in our Ref-COD topic.
 
 ## Environment setup
