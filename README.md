@@ -28,9 +28,10 @@ camouflaged objects based on a small set of referring images with salient target
 
 **Note that**
 I will upload the codes later, including:
-- [ ] the embedding process of the common representations of target objects; 
-- [ ] the attribution evaluation of different COD / Ref-COD methods;
-- [ ] others.
+- [ ] The embedding process of the common representations of target objects; 
+- [ ] The attribution evaluation of different COD / Ref-COD methods;
+- [ ] Visualization.
+- [ ] Other tools.
 
 And you can first use my processed representations at the below dataset link if you are interested in our Ref-COD topic.
 
@@ -49,7 +50,7 @@ conda activate refcod
     </em>
 </p>
 
-- Download our ensembled [R2C7K](https://pan.baidu.com/s/13wRyW81TIPjVCj9GP7o4BQ) dataset with access code ```2023``` on Baidu Netdisk.  
+- Download our ensembled [R2C7K](https://pan.baidu.com/s/13wRyW81TIPjVCj9GP7o4B) dataset with access code ```2023``` on Baidu Netdisk.  
 ```   
 ├── R2C7K  
     ├── Camo  
