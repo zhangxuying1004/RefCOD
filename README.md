@@ -24,7 +24,8 @@ camouflaged objects based on a small set of referring images with salient target
     </em>
 </p>
 
-> For technical questions, feel free to contact [zhangxuying1004@gmail.com]() and [bowenyin@mail.nankai.edu.cn](). If our work gives some inspiration to you, please cite it ([BibTeX](https://scholar.google.com.hk/scholar?hl=zh-CN&as_sdt=0%2C5&q=Referring+Camouflaged+Object+Detection+Xuying+&btnG=)) and star this project. Thank you!
+> For technical questions, feel free to contact [zhangxuying1004@gmail.com]() and [bowenyin@mail.nankai.edu.cn](); For commercial licensing, please contact [cmm@nankai.edu.cn]().
+> If our work gives some inspiration to you, please cite it ([BibTeX](https://scholar.google.com.hk/scholar?hl=zh-CN&as_sdt=0%2C5&q=Referring+Camouflaged+Object+Detection+Xuying+&btnG=)) and star this project. Thank you!
 
 **Note that**
 I will upload the codes later, including:
