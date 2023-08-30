@@ -47,8 +47,8 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--model_name', type=str, default='r2cnet')
-    parser.add_argument('--dim', type=int, default=64, help='training batch size')
-    parser.add_argument('--testsize', type=int, default=352, help='training dataset size')
+    parser.add_argument('--dim', type=int, default=64, help='dimension of our model')
+    parser.add_argument('--testsize', type=int, default=352, help='testing image size')
     parser.add_argument('--shot', type=int, default=5)
   
     parser.add_argument('--num_workers', type=int, default=8, help='the number of workers in dataloader')
