@@ -77,22 +77,17 @@ RFE module. Finally, the enriched features are fed into the decoder to generate 
     </em>
 </p>
 
-**3. Train.**
-```
-python train.py --model_name r2cnet --gpu_id 0
-```
-
-**4. Infer.**
+**3. Infer.**
 - Download the pre-trained [r2cnet.pth](https://pan.baidu.com/s/1daqxGTy120JondOIvCAEOw) checkpoints with access code ```2023``` on Baidu Netdisk.
 - Put the checkpoint file on './snapshot/saved_models/'.
 - Run ```python infer.py``` to generate the foreground maps of R2CNet.
 - You can also directly refer to the predictions [R2CNet-Maps](https://pan.baidu.com/s/1unQQOn9w3rW9aWdnYf_zrA) with access code ```2023``` on Baidu Netdisk.
 
-**5. Test.**
+**4. Test.**
 - Assert that the pre-trained [r2cnet.pth](https://pan.baidu.com/s/1daqxGTy120JondOIvCAEOw) checkpoint file has been placed in './snapshot/saved_models/'.
 - Run ```python test.py``` to evaluate the performance of R2CNet.
 
-**6. Ref-COD Benchmark Results.**
+**5. Ref-COD Benchmark Results.**
 <p align="center">
     <em>
       Tab. 1. Comparison of the COD models with their Ref-COD counterparts. All models are evaluated on a NVIDIA RTX 3090 GPU. ‘R-50’: ResNet-50 [82],
