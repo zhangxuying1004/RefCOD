@@ -8,7 +8,7 @@
 > [Ming-Ming Cheng](https://mmcheng.net/).
 
 ## Introduction
-This repo contains the official dataset and source code of the paper [_Referring Camouflaged Object Detection_](https://arxiv.org/pdf/2306.07532.pdf).   
+This repo contains the official dataset and source code of our paper [_Referring Camouflaged Object Detection_](https://arxiv.org/pdf/2306.07532.pdf) accepted by TPAMI 2025.   
 In this paper, we consider the problem of referring camouflaged object detection (Ref-COD), a new task that aims to segment specified
 camouflaged objects based on a small set of referring images with salient target objects. 
   
